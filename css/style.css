@@ -1,0 +1,61 @@
+ /* Estilo básico para exibir a formação no formato de uma grid */
+ #campo {
+    display: grid;
+    grid-template-columns: repeat(7, 10vw);
+    grid-template-rows: repeat(5, 15vh);
+    gap: 2rem;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.jogador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 200px;
+    width: 200px; */
+    color: white;
+    font-size: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+#reservas {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#reservas .jogador {
+    width: 100px;
+    height: 100px;
+    font-size: large;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+ #reservas .imagem-jogador {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Definindo cores para cada tipo de jogador */
+.atacante { background-color: yellow; }
+.meio { background-color: purple; }
+.lateral { background-color: blue; }
+.zagueiro { background-color: green; }
+.goleiro { background-color: pink; }

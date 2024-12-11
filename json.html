@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Formação de Futebol</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Escolha a Formação do Time</h1>
+
+    <!-- Botões para escolher a formação -->
+    <button onclick="loadAndChangeFormation('4-4-2', 'time1')">4-4-2</button>
+    <button onclick="loadAndChangeFormation('4-3-3', 'time2')">4-3-3</button>
+    <button onclick="loadAndChangeFormation('3-5-2', 'time3')">3-5-2</button>
+
+    <!-- Div para exibir a formação -->
+    <div id="campo"></div>
+
+    <div id="reservas"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/canSubstitute.js"></script>
+    <script src="js/trade.js"></script>
+    <script src="js/displayReserves.js"></script>
+    <script src="js/key.js"></script>
+
+</body> 
+
+</html>
