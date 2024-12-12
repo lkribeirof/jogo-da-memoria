@@ -1,10 +1,22 @@
 {
     "goleiro": "img/titulares/goleiro.png",
     "zagueiro": "img/titulares/zagueiro.png",
+    "zagueiroEsquerdo": "img/titulares/zagueiroEsquerdo.png",
     "lateral": "img/titulares/lateral.png",
-    "meio": "img/titulares/meia.png",
+    "lateralEsquerdo": "img/titulares/lateralEsquerdo.png",
+    "meia": "img/titulares/meia.png",
+    "meiaDireita": "img/titulares/meiaDireita.png",
+    "meiaEsquerda": "img/titulares/meiaEsquerda.png",
     "atacante": "img/titulares/atacante.png",
-    "reserva": "img/reserva.jpg",
-    "estevao": "img/estevao.jpg",
-    "endrick": "img/endrick.jpg"
+    "pontaDireita": "img/titulares/pontaDireita.png",
+    "pontaEsquerda": "img/titulares/pontaEsquerda.png",
+    
+
+    "goleiroReserva": "img/reservas/goleiroReserva.jpg",
+    "zagueiroReserva": "img/reservas/zagueiroReserva.png",
+    "lateralReserva": "img/reservas/lateralReserva.png",
+    "meioReserva": "img/reservas/meiaReserva.png",
+    "atacanteReserva": "img/reservas/atacanteReserva.png"
+    
 }
+

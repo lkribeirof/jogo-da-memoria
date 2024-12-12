@@ -1,11 +1,9 @@
 function fillReservaMatrix(reserves) {
-    // Cria uma matriz vazia para as reservas (5x7)
     let reservaMatrix = Array.from({ length: 5 }, () => Array(7).fill(0));
 
-    // Preenche a matriz de reservas com os dados do JSON
     for (let position in reserves) {
         const [i, j] = position.split("-").map(Number);
-        reservaMatrix[i][j] = reserves[position];
+        reservaMatrix[i][j] = reserves[position].value; // Acessar o campo "value"
     }
 
     console.log("Matriz de reservas preenchida:", reservaMatrix);

@@ -13,23 +13,20 @@ function displayReserves(reservaMatrix, images) {
                 const img = document.createElement('img');
                 img.classList.add('imagem-jogador');
 
-                const imageKey = getImageKey(value);
-                img.src = images[imageKey] || 'img/default.jpg'; // Garante um fallback se a chave não existir
+                const { imageKey, type } = getImageKey(value); // Busca chave e tipo
+                img.src = images[imageKey] || 'img/erro.png';  // Fallback para imagens ausentes
 
-                // Atributos para localização
+                // Atributos para localização e tipo
                 player.setAttribute('data-row', rowIndex);
                 player.setAttribute('data-col', colIndex);
-
-                // Adiciona o tipo ao jogador da reserva
-                player.dataset.type = row[colIndex].type;
+                player.dataset.type = type;
 
                 player.appendChild(img);
                 reserveContainer.appendChild(player);
 
                 player.addEventListener('click', () => {
-                    // Armazena o jogador reserva selecionado
-                    selectedReserve = { rowIndex, colIndex, value, type: row[colIndex].type }; // Agora com tipo
-                    alert(`Jogador reserva ${value} selecionado!`);
+                    selectedReserve = { rowIndex, colIndex, value, type };
+                    alert(`Jogador reserva ${value} (${type}) selecionado!`);
                 });
             }
         }

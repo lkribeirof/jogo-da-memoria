@@ -1,33 +1,32 @@
 function getImageKey(value) {
-    switch (value) {
-        case 1:
-        case 12:
-            return "goleiro"; // Chave no JSON para goleiros
-        case 2:
-        case 3:
-        case 13:
-        case 14:
-            return "zagueiro"; // Chave no JSON para zagueiros
-        case 4:
-        case 5:
-        case 15:
-        case 16:
-            return "lateral"; // Chave no JSON para laterais
-        case 6:
-        case 7:
-        case 8:
-        case 17:
-        case 18:
-        case 19:
-            return "meio"; // Chave no JSON para meio-campistas
-        case 9:
-        case 10:
-        case 11:
-        case 20:
-        case 21:
-        case 22:
-            return "atacante"; // Chave no JSON para atacantes
-        default:
-            return "default"; // Retorna default caso não encontre o valor
-    }
+    const valueMap = {
+        1: { imageKey: "goleiro", type: "goleiro" },
+        12: { imageKey: "goleiroReserva", type: "goleiro" },
+        
+        2: { imageKey: "zagueiro", type: "zagueiro" },
+        3: { imageKey: "zagueiroEsquerdo", type: "zagueiro" },
+        13: { imageKey: "zagueiroReserva", type: "zagueiro" },
+        14: { imageKey: "zagueiroReserva", type: "zagueiro" },
+        
+        4: { imageKey: "lateral", type: "lateral" },
+        5: { imageKey: "lateralEsquerdo", type: "lateral" },
+        15: { imageKey: "lateralReserva", type: "lateral" },
+        16: { imageKey: "lateralReserva", type: "lateral" },
+        
+        6: { imageKey: "meiaDireita", type: "meio" },
+        7: { imageKey: "meia", type: "meio" },
+        8: { imageKey: "meiaEsquerda", type: "meio" },
+        17: { imageKey: "meioReserva", type: "meio" },
+        18: { imageKey: "meioReserva", type: "meio" },
+        19: { imageKey: "meioReserva", type: "meio" },
+        
+        9: { imageKey: "pontaDireita", type: "atacante" },
+        10: { imageKey: "atacante", type: "atacante" },
+        11: { imageKey: "pontaEsquerda", type: "atacante" },
+        20: { imageKey: "atacanteReserva", type: "atacante" },
+        21: { imageKey: "atacanteReserva", type: "atacante" },
+        22: { imageKey: "atacanteReserva", type: "atacante" },
+    };
+
+    return valueMap[value] || { imageKey: "default", type: "default" };
 }
